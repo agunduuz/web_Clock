@@ -96,5 +96,5 @@
     
 16. Her saniye çağırmak için kullanılan `setInterval()` fonksiyonunu Global Scope da çağırdığımız `setTime()` fonksiyonundan sonra kullanıyoruz. Ve kaç milisaniyede bir çağırılacağını belirtiyoruz. `setInterval (setTime, 1000)`
 17. Bir sonraki Zaman ve Tarih yazılarını ayarlamaya geçmeden önce AM & PM ayarlamak için en yukarıda ampm adında bir değişken yaratalım. Bu durumu kontrol etmek için saati kontrol etmeliyiz saat eğer 12’den büyük veya eşit ise PM küçük ise AM yazdırılacak `const ampm = hours ≥ 12 ? ‘PM’ : ‘AM’`
-18. setTime fonksiyonu içerisinde şimdi yukarıda tanımladığımız time içerisine güncel saati tanımlıyoruz. `timeEl.innerHTML = `${hoursForClock}:${minutes < 10 ? `0${minutes}` : minutes} ${ampm}`` 
-19. Ve aynı şekilde dateEl için bir tanımlama yapıyoruz. İlk olarak günleri ve ardından ay ve kaçıncı tarihte olduğumuzu bildiriyoruz. `dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle"> ${date} </span>``
+18. setTime fonksiyonu içerisinde şimdi yukarıda tanımladığımız time içerisine güncel saati tanımlıyoruz. ``timeEl.innerHTML = `${hoursForClock}:${minutes < 10 ? `0${minutes}` : minutes} ${ampm}`` 
+19. Ve aynı şekilde dateEl için bir tanımlama yapıyoruz. İlk olarak günleri ve ardından ay ve kaçıncı tarihte olduğumuzu bildiriyoruz. ``dateEl.innerHTML = `${days[day]}, ${months[month]} <span class="circle"> ${date} </span>``
