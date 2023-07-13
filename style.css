@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --background-color: #fff3e2;
+  --bg-dark-color: #454545;
+  --primary-fill: #e74646;
+  --alternative-fill: #ff6000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  transition: all 0.5s ease-in;
+}
+
+html.dark {
+  --bg-dark-color: #fff3e2;
+  --background-color: #454545;
+}
+
+html.dark {
+  background-color: var(--background-color);
+  color: var(--bg-dark-color);
+}
+
+body {
+  font-family: 'Poppins';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--background-color);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+button.toggle {
+  background-color: var(--bg-dark-color);
+  color: var(--background-color);
+  border: 0;
+  border-radius: 4px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 75px;
+  cursor: pointer;
+}
+.toggle:focus {
+  outline: none;
+}
+
+article.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article section.clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+article section aside.needle {
+  background-color: var(--bg-dark-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 65px;
+  width: 3px;
+  transform-origin: bottom center;
+  transition: all 0.5s ease-in;
+}
+
+aside.needle.hour {
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+aside.needle.minute {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+}
+aside.needle.second {
+  transform: translate(-50%, -100%) rotate(0deg);
+  height: 100px;
+  background-color: var(--primary-fill);
+}
+aside.center-point {
+  background-color: var(--primary-fill);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+aside.center-point::after {
+  content: '';
+  background-color: var(--bg-dark-color);
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+article section.time {
+  font-size: 4rem;
+}
+article section.date {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: #aaa;
+}
+article section.date span.circle {
+  background-color: var(--bg-dark-color);
+  color: var(--background-color);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1rem;
+  transition: all 0.5s ease-in;
+  font-size: 0.8rem;
+}
